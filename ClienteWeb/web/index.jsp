@@ -11,6 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bienvenido</title>
         <script src="js/libs/jquery/jquery.js"> </script>
+            <script> 
+            $(document).ready(function(){
+          alert("prueba");
+            });
+            </script>
     </head>
     <body>
         <h1>Hello World!</h1>
