@@ -12,31 +12,57 @@
         <title>Bienvenido</title>
         <script src="js/libs/jquery/jquery.js"> </script>
         <link rel="stylesheet" href="js/libs/twitter-bootstrap/css/bootstrap.css">
-            <script> 
-            $(document).ready(function(){
-        //  alert("prueba");
-                $("#mensaje").click(function(){
-                //    $("#respuesta").html("Traete las rodilleras");         
-    $.ajax({
-    url:'http://localhost:8096/mavenspring/servicios/servicio-usuario/todos',
-    type: 'GET',
-    data: {
-        
-    },
-    success: function (data, textStatus, jqXHR) {
-        $("#respuesta").html(data);                 
-    },
-    failure: function(data){
-        
-    }
-            
-    });            
-    });
-    });
-            </script>
     </head>
     <body>
-        <h1 id="mensaje" class="btn btn-lg btn-success">Apachurramesta!!</h1>
-        <div id="respuesta">Ya me quiero ir </div>
+        
+
+<form role="form">
+  <div class="form-group">
+      <label for="alta_de_usuarios">Alta de usuarios de sistema</label><br>
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre"
+           placeholder="Introduce tu nombre(s)">
+  </div>
+    <div class="form-group">
+    <label for="apellidop">Apellido Paterno</label>
+    <input type="text" class="form-control" id="apellidop"
+           placeholder="Introduce tu apellido paterno">
+  </div>
+  <div class="form-group">
+    <label for="apellidom">Apellido Materno</label>
+    <input type="text" class="form-control" id="apellidom" 
+           placeholder="Introduce tu apellido materno">
+  </div>
+
+    <div>
+        <label for="rol">Rol:</label> <br>
+        <select class="form-control" id="rol">
+  <option>Administrador</option>
+  <option>Gerente</option>
+  <option>Cajero</option>
+</select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success" id="registrar">Registrar</button>
+</form>
     </body>
+    <script>
+     $("#registrar").click(function(){
+var nombre = $("#nombre").val();
+var apell                                   idop = $("#apellidop").val();
+var apellidom = $("#apellidom").val();
+var apellidop = $("#rol").val();
+
+$.ajax({
+method: 'POST',         
+url:"http://localhost:8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    084/ProyectoFinal-Java3/servicios/categorias/"+ cat,
+success: function(mensaje){                                                                                                   
+alert(mensaje);
+},
+failure: function(e){
+alert(e);
+},
+});
+});
+</script>
 </html>
